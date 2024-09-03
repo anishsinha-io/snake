@@ -5,3 +5,5 @@ build/
 Snake.app
 Toffee.iconset
 
+*.dmg
+.DS_Store
