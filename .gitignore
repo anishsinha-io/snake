@@ -1,3 +1,7 @@
 *.a
 .clangd
 build/
+
+Snake.app
+Toffee.iconset
+
