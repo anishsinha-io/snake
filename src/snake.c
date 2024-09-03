@@ -72,24 +72,24 @@ int snake_move(snake* s, direction dir) {
 
     switch (dir) {
         case UP:
-            new_segment->position.y -= s->velocity * 6;
+            new_segment->position.y -= 5;
             // new_segment->position.y = first.y - 10;
             s->direction = UP;
             break;
         case DOWN:
-            new_segment->position.y += s->velocity * 6;
+            new_segment->position.y += 5;
             // new_segment->position.y = first.y + 10;
             s->direction = DOWN;
             break;
         case LEFT:
             // new_segment->position.x = first.x - 10;
-            new_segment->position.x -= s->velocity * 6;
+            new_segment->position.x -= 5;
             s->direction = LEFT;
             break;
         case RIGHT:
             // new_segment->position.x = first.x + 10;
             s->direction = RIGHT;
-            new_segment->position.x += s->velocity * 6;
+            new_segment->position.x += 5;
             break;
     };
 
@@ -104,19 +104,19 @@ int snake_grow(snake* s) {
 
     switch (s->direction) {
         case UP:
-            new->position.y = last.y - 6;
+            new->position.y = last.y + 0;
             new->position.x = last.x;
             break;
         case DOWN:
-            new->position.y = last.y + 6;
+            new->position.y = last.y - 0;
             new->position.x = last.x;
             break;
         case LEFT:
-            new->position.x = last.x - 6;
+            new->position.x = last.x + 0;
             new->position.y = last.y;
             break;
         case RIGHT:
-            new->position.x = last.x + 6;
+            new->position.x = last.x - 0;
             new->position.y = last.y;
             break;
     }
